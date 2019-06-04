@@ -1,0 +1,122 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */
+
+/******* Banner CSS *********/
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -moz-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  -o-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-caption {
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.carousel-caption div {
+  font-size: 18px;
+  padding: 0px 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.sidebar {
+  background-color: #1b5b92;
+  border-left: 50px solid #103254;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.navbar-default {
+  background: none;
+  border: none;
+}
+
+.footer {
+  background-color: #79c942;
+  margin-top: 0px;
+  border: none;
+}
+
+.content-block {
+  margin: 30px 0px;
+  overflow: auto;
+  clear: both;
+}
+
+.content-block .blue-block {
+  border: 5px solid #1b5b92;
+}
+
+.blue-block .title {
+  background-color: #1b5b92;
+  padding: 0px 5px 5px 0px;
+  color: #FFF;
+}
+
+.blue-block p {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.overlay-div .image {
+  width: 50%;
+  float: left;
+}
+
+.overlay-div .image img {
+  width: 100%;
+}
+
+.overlay-div .content {
+  float: left;
+  width: 50%;
+  margin-left: -50px;
+  background-color: #454545;
+  color: #fff;
+  padding: 20px;
+  margin-top: 75px;
+}
+
+.overlay-div .content2 {
+  margin: -210px;
+  margin-left: 50px;
+  display: block;
+  clear: both;
+  background-color: #e3e3e3;
+  color: #000;
+}
+
+.overlay-div .image2 {
+  padding: 10px;
+}
+
+.webform-submission-contact-forms-form {
+  margin: 30px 50px;
+  padding: 30px;
+  background-color: #e3e3e3;
+}
