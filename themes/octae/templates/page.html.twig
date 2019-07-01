@@ -51,9 +51,8 @@
  * @see html.html.twig
  */
 #}
-<div class="container overflow">
-    <div class="row">
-<div class="col-md-3 sidebar">
+<div class="container wrapper">
+<div class="sidebar">
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
@@ -62,14 +61,14 @@
       set navbar_classes = [
         'navbar',
         theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
+    theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : '',
       ]
     %}
     <div{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       {% if not navbar_attributes.hasClass(container) %}
         <div>
       {% endif %}
-      <div class="navbar-header">
+      <div>
         {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
         {% if page.navigation_collapsible %}
@@ -95,16 +94,22 @@
   {% endblock %}
 {% endif %}
 </div>
-        <div class="col-md-9">
+        <div id="content">
 {# Main #}
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
-    <div class="row">
 
       {# Header #}
       {% if page.header %}
         {% block header %}
-          <div class="col-sm-12" role="heading">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fa fa-align-left"></i>
+            </button>
+
+            <div class="placeholder" role="heading">
+            PlaceholderTextforHeader
+          </div>
+          <div class="logo-image">
             {{ page.header }}
           </div>
         {% endblock %}
@@ -139,16 +144,16 @@
         {% endblock %}
       </section>
 
-    </div>
   </div>
 {% endblock %}
         </div>
-    </div>
 </div>
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer {{ container }}" role="contentinfo">
+      <div class="{{ container }}">
+    <footer class="footer" role="contentinfo">
       {{ page.footer }}
     </footer>
+      </div>
   {% endblock %}
 {% endif %}

@@ -3,6 +3,9 @@ framework:
     theme:
       css/style.css: {}
 
+  js:
+    js/custom.js: {}
+
 # Uncomment for LESS source JavaScript files.
 #  js:
 #    bootstrap/js/affix.js: {}
