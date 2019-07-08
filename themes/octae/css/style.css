@@ -343,7 +343,7 @@ ul.quicktabs-tabs li a:hover {
 
 .views_slideshow_controls_text_previous, .views_slideshow_controls_text_first {
   position: absolute;
-  top: 40%;
+  margin-top: 20%;
   z-index: 99;
   font-size: 40px;
   font-weight: bold;
@@ -355,7 +355,7 @@ ul.quicktabs-tabs li a:hover {
 
 .views_slideshow_controls_text_next, .views_slideshow_controls_text_last {
   position: absolute;
-  top: 40%;
+  margin-top: 20%;
   z-index: 999;
   right: 0;
   font-size: 40px;
@@ -427,7 +427,11 @@ ul.quicktabs-tabs li a:hover {
   .quicktabs-tabs {
     margin-left: 20px;
   }
-}
+  .views_slideshow_controls_text_previous, .views_slideshow_controls_text_first, 
+  .views_slideshow_controls_text_next, .views_slideshow_controls_text_last {
+    margin-top: 40%;
+  }
+  }
 
 @media (min-width: 768px) {
   body {
