@@ -63,7 +63,7 @@
 }
 
 .carousel-caption div {
-  font-size: 18px;
+  font-size: 1.5vw;
   padding: 0px 25px;
   font-weight: bold;
   text-align: left;
@@ -409,6 +409,24 @@ ul.quicktabs-tabs li a:hover {
   .overlay-div .content2 {
     margin: 0 auto;
   }
+  .partnership .left {
+    float: none;
+    background: none;
+    position: relative;
+    margin-left: 0px;
+    width: 100%;
+  }
+  .partnership .right {
+    float: none;
+    width: 100%;
+    padding-left: 25px;
+  }
+  ul.quicktabs-tabs li a {
+    font-size: 11px;
+  }
+  .quicktabs-tabs {
+    margin-left: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -428,21 +446,6 @@ ul.quicktabs-tabs li a:hover {
   }
   #sidebarCollapse {
     display: block;
-  }
-  .partnership .left {
-    float: none;
-    background: none;
-    position: relative;
-    margin-left: 0px;
-    width: 100%;
-  }
-  .partnership .right {
-    float: none;
-    width: 100%;
-    padding-left: 25px;
-  }
-  ul.quicktabs-tabs li a {
-    font-size: 11px;
   }
 }
 
