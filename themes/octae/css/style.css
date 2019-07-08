@@ -63,7 +63,7 @@
 }
 
 .carousel-caption div {
-  font-size: 1.5vw;
+  font-size: 1.5em;
   padding: 0px 25px;
   font-weight: bold;
   text-align: left;
@@ -97,15 +97,15 @@
 }
 
 .btn-info:hover {
-  background-color: #103354;
+  background-color: #103354 !important;
 }
 
 .btn-info:active {
-  background-color: #103354;
+  background-color: #103354 !important;
 }
 
 .btn-info:focus {
-  background-color: #103354;
+  background-color: #103354 !important;
 }
 
 article img {
@@ -446,6 +446,22 @@ ul.quicktabs-tabs li a:hover {
   }
   #sidebarCollapse {
     display: block;
+  }
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .carousel-caption div {
+    font-size: 1em;
+  }
+  .block-quicktabs-blockresource h2 {
+    position: relative;
+  }
+  #quicktabs-resource .quicktabs-tabs {
+    margin-left: 50px;
   }
 }
 
