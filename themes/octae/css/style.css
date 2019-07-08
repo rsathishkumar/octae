@@ -341,6 +341,10 @@ ul.quicktabs-tabs li a:hover {
   padding: 5px 30px;
 }
 
+.views-slideshow-controls-top {
+  position: relative;
+}
+
 .views_slideshow_controls_text_previous, .views_slideshow_controls_text_first {
   position: absolute;
   margin-top: 20%;
