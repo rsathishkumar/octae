@@ -217,6 +217,25 @@ article img {
   color: #FFFFFF;
 }
 
+.resources-block, .resources-block-2 {
+  overflow: auto;
+  clear: both;
+}
+
+.resources-block .left, .resources-block-2 .left {
+  float: left;
+  width: 50px;
+}
+
+.resources-block .left img, .resources-block-2 .left img {
+  max-width: 45px;
+}
+
+.resources-block .right, .resources-block-2 .right {
+  float: left;
+  width: 80%;
+}
+
 .quicktabs-wrapper {
   margin: 20px 0px !important;
 }
@@ -280,6 +299,11 @@ ul.quicktabs-tabs li a:hover {
   background-color: #103254;
   border-left: 5px solid #79c942;
   padding-left: 10px ;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: #103254;
+  border-left: 5px solid #79c942;
 }
 
 .quicktabs-tabpage {
@@ -435,7 +459,11 @@ ul.quicktabs-tabs li a:hover {
   .views_slideshow_controls_text_next, .views_slideshow_controls_text_last {
     margin-top: 40%;
   }
+  .resources-block .left {
+    width: 20%;
   }
+
+}
 
 @media (min-width: 768px) {
   body {
@@ -470,6 +498,9 @@ ul.quicktabs-tabs li a:hover {
   }
   #quicktabs-resource .quicktabs-tabs {
     margin-left: 50px;
+  }
+  .container:before, .container:after {
+    display: block;
   }
 }
 

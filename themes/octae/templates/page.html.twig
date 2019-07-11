@@ -51,9 +51,9 @@
  * @see html.html.twig
  */
 #}
-<div class="container wrapper">
+<div class="wrapper">
 <div class="sidebar">
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : '' %}
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
