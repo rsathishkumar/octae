@@ -423,6 +423,10 @@ ul.quicktabs-tabs li a:hover {
   height: 250px;
 }
 
+.help-block {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .overlay-div .image {
     float: none;
@@ -459,10 +463,6 @@ ul.quicktabs-tabs li a:hover {
   .views_slideshow_controls_text_next, .views_slideshow_controls_text_last {
     margin-top: 40%;
   }
-  .resources-block .left {
-    width: 20%;
-  }
-
 }
 
 @media (min-width: 768px) {
