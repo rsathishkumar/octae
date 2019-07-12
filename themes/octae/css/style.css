@@ -359,7 +359,7 @@ ul.quicktabs-tabs li a:hover {
   margin-left: 250px;
 }
 
-.block-quicktabs-blockresource h2 {
+.block-quicktabs-blockresources h2 {
   font-size: 20px;
   position: absolute;
   padding: 5px 30px;
@@ -493,10 +493,10 @@ ul.quicktabs-tabs li a:hover {
   .carousel-caption div {
     font-size: 1em;
   }
-  .block-quicktabs-blockresource h2 {
+  .block-quicktabs-blockresources h2 {
     position: relative;
   }
-  #quicktabs-resource .quicktabs-tabs {
+  #quicktabs-resources .quicktabs-tabs {
     margin-left: 50px;
   }
   .container:before, .container:after {
