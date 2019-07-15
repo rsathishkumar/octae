@@ -371,10 +371,6 @@ class ManagedFile extends FormElement {
       $element['upload']['#attached']['drupalSettings']['file']['elements']['#' . $id] = $extension_list;
     }
 
-    // Let #id point to the file element, so the field label's 'for' corresponds
-    // with it.
-    $element['#id'] = &$element['upload']['#id'];
-
     // Prefix and suffix used for Ajax replacement.
     $element['#prefix'] = '<div id="' . $ajax_wrapper_id . '">';
     $element['#suffix'] = '</div>';
