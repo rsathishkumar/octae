@@ -82,6 +82,11 @@
   transition: all 0.3s;
 }
 
+.fixedsection {
+  position: fixed;
+  width: 210px;
+}
+
 #sidebarCollapse {
   display: none;
 }
