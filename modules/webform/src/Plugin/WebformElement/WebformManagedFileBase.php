@@ -406,7 +406,7 @@ abstract class WebformManagedFileBase extends WebformElementBase implements Webf
     $format = $this->getItemFormat($element);
     switch ($format) {
       case 'id':
-        return $file->id();
+        return $file->id() . '-wrapper';
 
       case 'name':
         return $file->getFilename();

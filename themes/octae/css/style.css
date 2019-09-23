@@ -4,6 +4,15 @@
  */
 
 /******* Banner CSS *********/
+body {
+  background: #103254;
+}
+
+.wrapper {
+  background: #FFF;
+  width: 1098px;
+  margin: 0 auto;
+}
 .hero {
   position: absolute;
   top: 50%;
@@ -43,14 +52,15 @@
 
 .placeholder {
   font-size: 20px;
-  margin: 20px 0px 10px 50px;
+  margin: 30px 0px 10px 50px;
+  font-weight: bold;
 }
 
 .logo-image {
   position: absolute;
   right: 10%;
   z-index: 1;
-  top: -20px;
+  top: -30px;
 }
 
 .logo-image .navbar-btn {
@@ -59,7 +69,7 @@
 
 .logo-image img {
   width: 100%;
-  max-width: 125px;
+  max-width: 140px;
 }
 
 .carousel-caption div {
@@ -76,7 +86,6 @@
 
 .sidebar {
   background-color: #1b5b92;
-  border-left: 40px solid #103254;
   min-width: 250px;
   max-width: 250px;
   transition: all 0.3s;
@@ -84,7 +93,7 @@
 
 .fixedsection {
   position: fixed;
-  width: 210px;
+  width: 250px;
 }
 
 #sidebarCollapse {
@@ -290,25 +299,30 @@ ul.quicktabs-tabs li a:hover {
 }
 
 .nav>li {
-  margin: 20px 0px;
+  margin: 25px 0px;
+}
+
+.nav > li > a {
+  padding-left: 25px;
 }
 
 .nav a {
   color: #FFFFFF;
-  padding-left: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
   background-color: #103254;
-  border-left: 5px solid #79c942;
-  padding-left: 10px ;
+  border-left: 10px solid #79c942;
+  padding-left: 15px ;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #103254;
-  border-left: 5px solid #79c942;
+  border-left: 10px solid #79c942;
 }
 
 .quicktabs-tabpage {
@@ -432,7 +446,16 @@ ul.quicktabs-tabs li a:hover {
   display: none;
 }
 
+@media (max-width: 1098px) {
+  .wrapper {
+    width: 991px;
+  }
+}
+
 @media (max-width: 991px) {
+  .wrapper {
+    width: 100%;
+  }
   .overlay-div .image {
     float: none;
     margin: 0 auto;
