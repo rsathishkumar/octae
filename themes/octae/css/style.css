@@ -446,6 +446,10 @@ ul.quicktabs-tabs li a:hover {
   display: none;
 }
 
+.facebook {
+  margin-left: 15px;
+}
+
 @media (max-width: 1098px) {
   .wrapper {
     width: 991px;
