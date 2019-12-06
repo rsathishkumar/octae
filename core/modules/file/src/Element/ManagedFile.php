@@ -110,7 +110,8 @@ class ManagedFile extends FormElement {
                 // token added by $this->processManagedFile().
                 elseif (\Drupal::currentUser()->isAnonymous()) {
                   $token = NestedArray::getValue($form_state->getUserInput(), array_merge($element['#parents'], ['file_' . $file->id(), 'fid_token']));
-                  if ($token !== Crypt::hmacBase64('file-' . $file->id(), \Drupal::service('private_key')->get() . Settings::getHashSalt())) {
+                  $file_hmac = Crypt::hmacBase64('file-' . $file->id(), \Drupal::service('private_key')->get() . Settings::getHashSalt());
+                  if ($token === NULL || !hash_equals($file_hmac, $token)) {
                     $force_default = TRUE;
                     break;
                   }
@@ -217,7 +218,7 @@ class ManagedFile extends FormElement {
 
     // Set some default element properties.
     $element['#progress_indicator'] = empty($element['#progress_indicator']) ? 'none' : $element['#progress_indicator'];
-    $element['#files'] = !empty($fids) ? File::loadMultiple($fids) : FALSE;
+    $element['#files'] = !empty($fids) ? File::loadMultiple($fids) : [];
     $element['#tree'] = TRUE;
 
     // Generate a unique wrapper HTML ID.
@@ -286,16 +287,6 @@ class ManagedFile extends FormElement {
           '#weight' => -20,
         ];
       }
-      elseif ($implementation == 'apc') {
-        $element['APC_UPLOAD_PROGRESS'] = [
-          '#type' => 'hidden',
-          '#value' => $upload_progress_key,
-          '#attributes' => ['class' => ['file-progress']],
-          // Uploadprogress extension requires this field to be at the top of
-          // the form.
-          '#weight' => -20,
-        ];
-      }
 
       // Add the upload progress callback.
       $element['upload_button']['#ajax']['progress']['url'] = Url::fromRoute('file.ajax_progress', ['key' => $upload_progress_key]);
@@ -304,6 +295,7 @@ class ManagedFile extends FormElement {
       // identifier element before the form gets submitted.
       $element['upload_button']['#ajax']['event'] = 'fileUpload';
     }
+
     // Use a manually generated ID for the file upload field so the desired
     // field label can be associated with it below. Use the same method for
     // setting the ID that the form API autogenerator does.

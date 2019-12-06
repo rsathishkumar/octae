@@ -1,7 +1,5 @@
-name: OCTAE Form submissions
-description: "Custom module for saving forms"
+name: 'OCTAE Form submissions'
+description: 'Custom module for saving forms'
+package: Custom
 type: module
-
-# Information added by Drupal.org packaging script on 2017-06-16
 core: '8.x'
-project: 'octae'
