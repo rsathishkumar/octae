@@ -141,6 +141,14 @@ article img {
   border: none;
 }
 
+.content {
+  margin: 0px 20px;
+}
+
+.content li {
+  margin: 10px;
+}
+
 .content-block {
   margin: 30px 0px;
   overflow: auto;
