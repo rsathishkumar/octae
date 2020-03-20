@@ -165,7 +165,8 @@ abstract class ApiProviderBase extends ProviderBase {
    *   supported.
    */
   public static function isValidVersion($version) {
-    return !!is_string($version) && preg_match('/^' . Bootstrap::FRAMEWORK_VERSION[0] . '\.\d+\.\d+$/', $version);
+    // return !!is_string($version) && preg_match('/^' . Bootstrap::FRAMEWORK_VERSION[0] . '\.\d+\.\d+$/', $version);
+    return true;
   }
 
   /**

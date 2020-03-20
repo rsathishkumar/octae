@@ -181,7 +181,8 @@ class CdnAsset {
     }
     // Other (e.g. bootswatch theme).
     else {
-      $bootswatchThemes = isset(static::$bootswatchThemes[Bootstrap::FRAMEWORK_VERSION[0]]) ? static::$bootswatchThemes[Bootstrap::FRAMEWORK_VERSION[0]] : [];
+      //$bootswatchThemes = isset(static::$bootswatchThemes[Bootstrap::FRAMEWORK_VERSION[0]]) ? static::$bootswatchThemes[Bootstrap::FRAMEWORK_VERSION[0]] : [];
+      $bootswatchThemes = [];
       if (!$theme || ($theme && !in_array($theme, $bootswatchThemes))) {
         $theme = in_array($path, $bootswatchThemes) ? $path : 'bootstrap';
       }
@@ -194,7 +195,8 @@ class CdnAsset {
     // If no version was provided, attempt to extract it.
     // @todo Move regular expression to a constant once PHP 5.5 is no longer
     // supported.
-    if (!isset($version) && preg_match('`(' . Bootstrap::FRAMEWORK_VERSION[0] . '\.\d+\.\d+)`', $url, $matches)) {
+//    if (!isset($version) && preg_match('`(' . Bootstrap::FRAMEWORK_VERSION[0] . '\.\d+\.\d+)`', $url, $matches)) {
+    if (!isset($version)) {
       $version = $matches[1];
     }
 
