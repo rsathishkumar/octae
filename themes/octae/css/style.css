@@ -225,7 +225,8 @@ article img {
 }
 
 .partnership .left img {
-  height: 100px;
+  height: auto;
+  width: 100%;
 }
 
 .partnership .right {
