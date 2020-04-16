@@ -348,6 +348,10 @@ ul.quicktabs-tabs li a:hover {
   border-radius: 10px;
 }
 
+.resource-block {
+  margin: 40px;  
+}
+
 .resource-block .view-content {
   font-size: 15px;
   margin-top: 30px;
