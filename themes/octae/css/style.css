@@ -70,6 +70,10 @@ body {
   max-width: 140px;
 }
 
+.img-responsive {
+  width: 100%;
+}
+
 .carousel-caption div {
   font-size: 1.5em;
   padding: 0px 25px;
